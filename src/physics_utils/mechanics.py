@@ -1,6 +1,4 @@
-import pint
-
-_si = pint.UnitRegistry()
+from . import _si
 
 def kinetic_energy(m: float, v: float) -> float:
     """

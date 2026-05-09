@@ -1,7 +1,5 @@
-import pint
 import math
-
-_si = pint.UnitRegistry()
+from . import _si
 
 # gravitational constant
 G = 6.67430e-11 * _si.meter**3 / (_si.kilogram * _si.second**2)

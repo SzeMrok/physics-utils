@@ -1,2 +1,4 @@
 pint
 jupyter
+mkdocs-material
+mkdocstrings[python]

@@ -1,6 +1,9 @@
+import pint
+
 from . import _si
 
-def kinetic_energy(m: float, v: float) -> float:
+
+def kinetic_energy(m: float | pint.Quantity, v: float | pint.Quantity) -> pint.Quantity:
     """
     Calculate the kinetic energy.
     
@@ -9,7 +12,7 @@ def kinetic_energy(m: float, v: float) -> float:
         v (float): Velocity of the object (in meters per second).
     
     Returns:
-        float: Kinetic energy (in joules).
+        E_k (pint.Quantity): Kinetic energy (in joules).
     """
     
     if not isinstance(m, _si.Quantity):

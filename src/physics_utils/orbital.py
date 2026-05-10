@@ -16,7 +16,7 @@ def escape_velocity(M: float | pint.Quantity, R: float | pint.Quantity) -> pint.
         R (float): Radius from the center of the celestial body (in meters).
     
     Returns:
-        pint.Quantity: Escape velocity (in meters per second).
+        v_esc (pint.Quantity): Escape velocity (in meters per second).
     """
     
     if not isinstance(M, _si.Quantity):
@@ -37,7 +37,7 @@ def orbital_velocity(M: float | pint.Quantity, R: float | pint.Quantity) -> pint
         R (float): Radius from the center of the celestial body (in meters).
     
     Returns:
-        pint.Quantity: Orbital velocity (in meters per second).
+        v_orb (pint.Quantity): Orbital velocity (in meters per second).
     """
     
     if not isinstance(M, _si.Quantity):
@@ -58,7 +58,7 @@ def orbital_period(M: float | pint.Quantity, a: float | pint.Quantity) -> pint.Q
         a (float): Semi-major axis of the orbit (in meters).
     
     Returns:
-        pint.Quantity: Orbital period (in seconds).
+        T (pint.Quantity): Orbital period (in seconds).
     """
     
     if not isinstance(M, _si.Quantity):

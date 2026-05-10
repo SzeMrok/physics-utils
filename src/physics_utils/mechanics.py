@@ -12,7 +12,7 @@ def kinetic_energy(m: float | pint.Quantity, v: float | pint.Quantity) -> pint.Q
         v (float): Velocity of the object (in meters per second).
     
     Returns:
-        pint.Quantity: Kinetic energy (in joules).
+        E_k (pint.Quantity): Kinetic energy (in joules).
     """
     
     if not isinstance(m, _si.Quantity):

@@ -2,9 +2,10 @@
 
 Small physics helper package using Pint.
 
-## Functions
+## Mechanics
 
-- escape_velocity
-- orbital_velocity
-- orbital_period
-- kinetic_energy
+::: physics_utils.mechanics
+
+## Orbital
+
+::: physics_utils.orbital

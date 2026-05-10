@@ -1,11 +1,13 @@
 import math
+import pint
+
 from . import _si
 
 # gravitational constant
 G = 6.67430e-11 * _si.meter**3 / (_si.kilogram * _si.second**2)
 
 
-def escape_velocity(M: float, R: float) -> float:
+def escape_velocity(M: float | pint.Quantity, R: float | pint.Quantity) -> pint.Quantity:
     """
     Calculate the escape velocity.
     
@@ -14,7 +16,7 @@ def escape_velocity(M: float, R: float) -> float:
         R (float): Radius from the center of the celestial body (in meters).
     
     Returns:
-    float: Escape velocity (in meters per second).
+        pint.Quantity: Escape velocity (in meters per second).
     """
     
     if not isinstance(M, _si.Quantity):
@@ -26,7 +28,7 @@ def escape_velocity(M: float, R: float) -> float:
     return (2 * G * M / R) ** 0.5
 
 
-def orbital_velocity(M: float, R: float) -> float:
+def orbital_velocity(M: float | pint.Quantity, R: float | pint.Quantity) -> pint.Quantity:
     """
     Calculate the orbital velocity.
     
@@ -35,7 +37,7 @@ def orbital_velocity(M: float, R: float) -> float:
         R (float): Radius from the center of the celestial body (in meters).
     
     Returns:
-        float: Orbital velocity (in meters per second).
+        pint.Quantity: Orbital velocity (in meters per second).
     """
     
     if not isinstance(M, _si.Quantity):
@@ -47,7 +49,7 @@ def orbital_velocity(M: float, R: float) -> float:
     return (G * M / R) ** 0.5
 
 
-def orbital_period(M: float, a: float) -> float:
+def orbital_period(M: float | pint.Quantity, a: float | pint.Quantity) -> pint.Quantity:
     """
     Calculate the orbital period.
     
@@ -56,7 +58,7 @@ def orbital_period(M: float, a: float) -> float:
         a (float): Semi-major axis of the orbit (in meters).
     
     Returns:
-        float: Orbital period (in seconds).
+        pint.Quantity: Orbital period (in seconds).
     """
     
     if not isinstance(M, _si.Quantity):

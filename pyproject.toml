@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "physics-utils"
-version = "0.1.1"
+version = "0.2.0"
 description = "Simple physics utilities using Pint"
 readme = "README.md"
 license = {text = "MIT"}
@@ -12,6 +12,11 @@ license = {text = "MIT"}
 dependencies = [
     "pint"
 ]
+
+[project.urls]
+Repository = "https://github.com/SzeMrok/physics-utils"
+Documentation = "https://SzeMrok.github.io/physics-utils/"
+Issues = "https://github.com/SzeMrok/physics-utils/issues"
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
